@@ -1,0 +1,1067 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{60AEC101-734E-4322-BC88-EC70A78B9650}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>osiris.My.MyApplication</StartupObject>
+    <RootNamespace>osiris</RootNamespace>
+    <AssemblyName>osiris</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>osiris.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>osiris.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>osiris-isotipo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.VSDesigner, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.10.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data.Entity.EF6, Version=6.10.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySQL.Data.EntityFrameworkCore, Version=6.10.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySQL.Data.EntityFrameworkCore.Design, Version=6.10.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Web, Version=6.10.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression.FileSystem" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="TXDocumentServer.Windows.Forms.Design, Version=29.0.109.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Text Control GmbH\TX Text Control 29.0.NET for Windows Forms\Assembly\TXDocumentServer.Windows.Forms.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="TXDrawing, Version=29.0.500.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Text Control GmbH\TX Text Control 29.0.NET for Windows Forms\Assembly\TXDrawing.dll</HintPath>
+    </Reference>
+    <Reference Include="TXDrawing.Windows.Forms, Version=29.0.500.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Text Control GmbH\TX Text Control 29.0.NET for Windows Forms\Assembly\TXDrawing.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="TXImageProvider, Version=29.0.300.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Text Control GmbH\TX Text Control 29.0.NET for Windows Forms\Assembly\TXImageProvider.dll</HintPath>
+    </Reference>
+    <Reference Include="TXTextControl, Version=29.0.2200.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Text Control GmbH\TX Text Control 29.0.NET for Windows Forms\Assembly\TXTextControl.dll</HintPath>
+    </Reference>
+    <Reference Include="TXTextControl.Server, Version=29.0.1400.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Text Control GmbH\TX Text Control 29.0.NET for Windows Forms\Assembly\TXTextControl.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="TXTextControl.Windows.Forms, Version=29.0.1400.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Text Control GmbH\TX Text Control 29.0.NET for Windows Forms\Assembly\TXTextControl.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="TXTextControl.Windows.Forms.Design, Version=29.0.113.500, Culture=neutral, PublicKeyToken=6b83fe9a75cfb638, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Text Control GmbH\TX Text Control 29.0.NET for Windows Forms\Assembly\TXTextControl.Windows.Forms.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="acerca.Designer.vb">
+      <DependentUpon>acerca.vb</DependentUpon>
+    </Compile>
+    <Compile Include="acerca.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="administracion.Designer.vb">
+      <DependentUpon>administracion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="administracion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agenda.Designer.vb">
+      <DependentUpon>agenda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="agenda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="asignacion.Designer.vb">
+      <DependentUpon>asignacion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="asignacion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="asignar_informe.Designer.vb">
+      <DependentUpon>asignar_informe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="asignar_informe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="asistencia.Designer.vb">
+      <DependentUpon>asistencia.vb</DependentUpon>
+    </Compile>
+    <Compile Include="asistencia.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busqueda_estudios.Designer.vb">
+      <DependentUpon>busqueda_estudios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="busqueda_estudios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busqueda_informe.Designer.vb">
+      <DependentUpon>busqueda_informe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="busqueda_informe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="busqueda_reporte.Designer.vb">
+      <DependentUpon>busqueda_reporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="busqueda_reporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="colaboraciones.Designer.vb">
+      <DependentUpon>colaboraciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="colaboraciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="configuraciones.Designer.vb">
+      <DependentUpon>configuraciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="configuraciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="consultas\conexion.vb" />
+    <Compile Include="consultas\conexionprueba.vb" />
+    <Compile Include="consultas\conexion_agenda.vb" />
+    <Compile Include="consultas\conn_autocompletar.vb" />
+    <Compile Include="DS\dsEstudios.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsEstudios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsEstudios.vb">
+      <DependentUpon>dsEstudios.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsProcedimientos.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsProcedimientos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DS\dsProcedimientos.vb">
+      <DependentUpon>dsProcedimientos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="envio.Designer.vb">
+      <DependentUpon>envio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="envio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="envio_agenda.Designer.vb">
+      <DependentUpon>envio_agenda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="envio_agenda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="envio_agenda_imagenes.Designer.vb">
+      <DependentUpon>envio_agenda_imagenes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="envio_agenda_imagenes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="estudio_mod.Designer.vb">
+      <DependentUpon>estudio_mod.vb</DependentUpon>
+    </Compile>
+    <Compile Include="estudio_mod.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="favoritos.Designer.vb">
+      <DependentUpon>favoritos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="favoritos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios de configuracion\aplicar_plantilla.Designer.vb">
+      <DependentUpon>aplicar_plantilla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios de configuracion\aplicar_plantilla.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios de configuracion\cambiar_clave.Designer.vb">
+      <DependentUpon>cambiar_clave.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios de configuracion\cambiar_clave.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios de configuracion\config_sistema.Designer.vb">
+      <DependentUpon>config_sistema.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios de configuracion\config_sistema.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios de configuracion\descagar_estudio.Designer.vb">
+      <DependentUpon>descagar_estudio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios de configuracion\descagar_estudio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios de configuracion\descarga.Designer.vb">
+      <DependentUpon>descarga.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios de configuracion\descarga.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios de configuracion\frases.Designer.vb">
+      <DependentUpon>frases.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios de configuracion\frases.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios de configuracion\medicos_centros.Designer.vb">
+      <DependentUpon>medicos_centros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios de configuracion\medicos_centros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios de configuracion\modalidades.Designer.vb">
+      <DependentUpon>modalidades.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios de configuracion\modalidades.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios de configuracion\modificar_estudio.Designer.vb">
+      <DependentUpon>modificar_estudio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios de configuracion\modificar_estudio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios de configuracion\nueva_frase.Designer.vb">
+      <DependentUpon>nueva_frase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios de configuracion\nueva_frase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios de configuracion\nueva_plantilla.Designer.vb">
+      <DependentUpon>nueva_plantilla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios de configuracion\nueva_plantilla.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios de configuracion\plantillas.Designer.vb">
+      <DependentUpon>plantillas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios de configuracion\plantillas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios de configuracion\procedimientos.Designer.vb">
+      <DependentUpon>procedimientos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios de configuracion\procedimientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios de configuracion\procedimientos_centros.Designer.vb">
+      <DependentUpon>procedimientos_centros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios de configuracion\procedimientos_centros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formularios de configuracion\sicronizar_procedimiento.Designer.vb">
+      <DependentUpon>sicronizar_procedimiento.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formularios de configuracion\sicronizar_procedimiento.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de registros\adjuntos.Designer.vb">
+      <DependentUpon>adjuntos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de registros\adjuntos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de registros\agregar_correo.Designer.vb">
+      <DependentUpon>agregar_correo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de registros\agregar_correo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de registros\centros.Designer.vb">
+      <DependentUpon>centros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de registros\centros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de registros\enviar_informe_medico.Designer.vb">
+      <DependentUpon>enviar_informe_medico.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de registros\enviar_informe_medico.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de registros\guardar_plantilla.Designer.vb">
+      <DependentUpon>guardar_plantilla.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de registros\guardar_plantilla.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de registros\pacientes.Designer.vb">
+      <DependentUpon>pacientes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de registros\pacientes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de registros\seguros.Designer.vb">
+      <DependentUpon>seguros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de registros\seguros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de registros\tipo_estudio.Designer.vb">
+      <DependentUpon>tipo_estudio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de registros\tipo_estudio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de registros\usuarios.Designer.vb">
+      <DependentUpon>usuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de registros\usuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="informes.Designer.vb">
+      <DependentUpon>informes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="informes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inicio.Designer.vb">
+      <DependentUpon>inicio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="inicio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios de registros\roles.Designer.vb">
+      <DependentUpon>roles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios de registros\roles.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lista_informes.Designer.vb">
+      <DependentUpon>lista_informes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="lista_informes.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.vb">
+      <DependentUpon>login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main_menu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="main_menu.Designer.vb">
+      <DependentUpon>main_menu.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="misfirmas.Designer.vb">
+      <DependentUpon>misfirmas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="misfirmas.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modificar_fecha.Designer.vb">
+      <DependentUpon>modificar_fecha.vb</DependentUpon>
+    </Compile>
+    <Compile Include="modificar_fecha.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="navegador_agenda.Designer.vb">
+      <DependentUpon>navegador_agenda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="navegador_agenda.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="new_splash.Designer.vb">
+      <DependentUpon>new_splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="new_splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orden_medica.Designer.vb">
+      <DependentUpon>orden_medica.vb</DependentUpon>
+    </Compile>
+    <Compile Include="orden_medica.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pagos.Designer.vb">
+      <DependentUpon>pagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pagos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pagos_medicos.Designer.vb">
+      <DependentUpon>pagos_medicos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pagos_medicos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pago_detallado.Designer.vb">
+      <DependentUpon>pago_detallado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="pago_detallado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="preview.Designer.vb">
+      <DependentUpon>preview.vb</DependentUpon>
+    </Compile>
+    <Compile Include="preview.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="redactar_informe.Designer.vb">
+      <DependentUpon>redactar_informe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="redactar_informe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registros.Designer.vb">
+      <DependentUpon>registros.vb</DependentUpon>
+    </Compile>
+    <Compile Include="registros.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\informe_medico.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>informe_medico.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\reportemedicos.Designer.vb">
+      <DependentUpon>reportemedicos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\reportemedicos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\reporte_comision.Designer.vb">
+      <DependentUpon>reporte_comision.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\reporte_comision.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\reporte_estudios.Designer.vb">
+      <DependentUpon>reporte_estudios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\reporte_estudios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\reporte_pagoDetallado.Designer.vb">
+      <DependentUpon>reporte_pagoDetallado.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\reporte_pagoDetallado.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\reporte_pagos.Designer.vb">
+      <DependentUpon>reporte_pagos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\reporte_pagos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\reporte_procedimientos.Designer.vb">
+      <DependentUpon>reporte_procedimientos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\reporte_procedimientos.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reportes\rpt_estudios.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_estudios.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\rpt_medicos.vb">
+      <DependentUpon>rpt_medicos.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="reportes\rpt_pagos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_pagos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\rpt_pago_detallado.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_pago_detallado.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\rpt_procedimientos.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_procedimientos.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reportes\vista_previa.Designer.vb">
+      <DependentUpon>vista_previa.vb</DependentUpon>
+    </Compile>
+    <Compile Include="reportes\vista_previa.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="resubir.Designer.vb">
+      <DependentUpon>resubir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="resubir.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.vb">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="verestudios.Designer.vb">
+      <DependentUpon>verestudios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="verestudios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vista_estudio.Designer.vb">
+      <DependentUpon>vista_estudio.vb</DependentUpon>
+    </Compile>
+    <Compile Include="vista_estudio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="acerca.resx">
+      <DependentUpon>acerca.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="administracion.resx">
+      <DependentUpon>administracion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="agenda.resx">
+      <DependentUpon>agenda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="asignacion.resx">
+      <DependentUpon>asignacion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="asignar_informe.resx">
+      <DependentUpon>asignar_informe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="asistencia.resx">
+      <DependentUpon>asistencia.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="busqueda_estudios.resx">
+      <DependentUpon>busqueda_estudios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="busqueda_informe.resx">
+      <DependentUpon>busqueda_informe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="busqueda_reporte.resx">
+      <DependentUpon>busqueda_reporte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="colaboraciones.resx">
+      <DependentUpon>colaboraciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="configuraciones.resx">
+      <DependentUpon>configuraciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="envio.resx">
+      <DependentUpon>envio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="envio_agenda.resx">
+      <DependentUpon>envio_agenda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="envio_agenda_imagenes.resx">
+      <DependentUpon>envio_agenda_imagenes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="estudio_mod.resx">
+      <DependentUpon>estudio_mod.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="favoritos.resx">
+      <DependentUpon>favoritos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios de configuracion\aplicar_plantilla.resx">
+      <DependentUpon>aplicar_plantilla.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios de configuracion\cambiar_clave.resx">
+      <DependentUpon>cambiar_clave.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios de configuracion\config_sistema.resx">
+      <DependentUpon>config_sistema.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios de configuracion\descagar_estudio.resx">
+      <DependentUpon>descagar_estudio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios de configuracion\descarga.resx">
+      <DependentUpon>descarga.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios de configuracion\frases.resx">
+      <DependentUpon>frases.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios de configuracion\medicos_centros.resx">
+      <DependentUpon>medicos_centros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios de configuracion\modalidades.resx">
+      <DependentUpon>modalidades.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios de configuracion\modificar_estudio.resx">
+      <DependentUpon>modificar_estudio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios de configuracion\nueva_frase.resx">
+      <DependentUpon>nueva_frase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios de configuracion\nueva_plantilla.resx">
+      <DependentUpon>nueva_plantilla.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios de configuracion\plantillas.resx">
+      <DependentUpon>plantillas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios de configuracion\procedimientos.resx">
+      <DependentUpon>procedimientos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios de configuracion\procedimientos_centros.resx">
+      <DependentUpon>procedimientos_centros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formularios de configuracion\sicronizar_procedimiento.resx">
+      <DependentUpon>sicronizar_procedimiento.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de registros\adjuntos.resx">
+      <DependentUpon>adjuntos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de registros\agregar_correo.resx">
+      <DependentUpon>agregar_correo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de registros\centros.resx">
+      <DependentUpon>centros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de registros\enviar_informe_medico.resx">
+      <DependentUpon>enviar_informe_medico.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de registros\guardar_plantilla.resx">
+      <DependentUpon>guardar_plantilla.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de registros\pacientes.resx">
+      <DependentUpon>pacientes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de registros\seguros.resx">
+      <DependentUpon>seguros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de registros\tipo_estudio.resx">
+      <DependentUpon>tipo_estudio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de registros\usuarios.resx">
+      <DependentUpon>usuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="informes.resx">
+      <DependentUpon>informes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inicio.resx">
+      <DependentUpon>inicio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios de registros\roles.resx">
+      <DependentUpon>roles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lista_informes.resx">
+      <DependentUpon>lista_informes.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="main_menu.resx">
+      <DependentUpon>main_menu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="misfirmas.resx">
+      <DependentUpon>misfirmas.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modificar_fecha.resx">
+      <DependentUpon>modificar_fecha.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="navegador_agenda.resx">
+      <DependentUpon>navegador_agenda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="new_splash.resx">
+      <DependentUpon>new_splash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orden_medica.resx">
+      <DependentUpon>orden_medica.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pagos.resx">
+      <DependentUpon>pagos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pagos_medicos.resx">
+      <DependentUpon>pagos_medicos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pago_detallado.resx">
+      <DependentUpon>pago_detallado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="preview.resx">
+      <DependentUpon>preview.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="redactar_informe.resx">
+      <DependentUpon>redactar_informe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registros.resx">
+      <DependentUpon>registros.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\informe_medico.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>informe_medico.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\reportemedicos.resx">
+      <DependentUpon>reportemedicos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\reporte_comision.resx">
+      <DependentUpon>reporte_comision.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\reporte_estudios.resx">
+      <DependentUpon>reporte_estudios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\reporte_pagoDetallado.resx">
+      <DependentUpon>reporte_pagoDetallado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\reporte_pagos.resx">
+      <DependentUpon>reporte_pagos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\reporte_procedimientos.resx">
+      <DependentUpon>reporte_procedimientos.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\rpt_estudios.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_estudios.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\rpt_medicos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_medicos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\rpt_pagos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_pagos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\rpt_pago_detallado.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_pago_detallado.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\rpt_procedimientos.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_procedimientos.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reportes\vista_previa.resx">
+      <DependentUpon>vista_previa.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="resubir.resx">
+      <DependentUpon>resubir.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="verestudios.resx">
+      <DependentUpon>verestudios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vista_estudio.resx">
+      <DependentUpon>vista_estudio.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DS\dsEstudios.xsc">
+      <DependentUpon>dsEstudios.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsEstudios.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsEstudios.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DS\dsEstudios.xss">
+      <DependentUpon>dsEstudios.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsProcedimientos.xsc">
+      <DependentUpon>dsProcedimientos.xsd</DependentUpon>
+    </None>
+    <None Include="DS\dsProcedimientos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsProcedimientos.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="DS\dsProcedimientos.xss">
+      <DependentUpon>dsProcedimientos.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\disco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disco32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bichito.ico" />
+    <Content Include="bichito2.ico" />
+    <None Include="Resources\Loading_2.gif" />
+    <None Include="Resources\plus.png" />
+    <None Include="Resources\close.png" />
+    <None Include="Resources\skeleton.png" />
+    <None Include="Resources\skeleton1.png" />
+    <None Include="Resources\next.png" />
+    <None Include="Resources\back.png" />
+    <None Include="Resources\osirisnewsplash.png" />
+    <None Include="Resources\rotate.png" />
+    <None Include="Resources\beatle.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\gear.png" />
+    <None Include="Resources\expand.png" />
+    <None Include="Resources\NEGRITAS_.png" />
+    <None Include="Resources\subrayar.png" />
+    <None Include="Resources\CURSIVA.png" />
+    <None Include="Resources\avance.png" />
+    <None Include="Resources\osiris 1 otro fonfo %281%29.png" />
+    <None Include="Resources\osiris isotipo.png" />
+    <Content Include="osiris-isotipo.ico" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\floppy-disk.png" />
+    <None Include="Resources\eraser.png" />
+    <None Include="Resources\upload.png" />
+    <None Include="Resources\banner liberty tech.png" />
+    <None Include="Resources\shield.png" />
+    <None Include="Resources\seguros.png" />
+    <None Include="Resources\treatment.png" />
+    <None Include="Resources\roles.png" />
+    <None Include="Resources\usuarios.png" />
+    <None Include="Resources\centros.png" />
+    <None Include="Resources\centros_usuarios.png" />
+    <None Include="Resources\plantillas.png" />
+    <None Include="Resources\modulos.png" />
+    <None Include="Resources\procedimientos.png" />
+    <None Include="Resources\price-tag.png" />
+    <None Include="Resources\asignacion.png" />
+    <None Include="Resources\buscar_informe.png" />
+    <None Include="Resources\reportes.png" />
+    <None Include="Resources\medical-report.png" />
+    <None Include="Resources\firmar2.png" />
+    <None Include="Resources\x-ray-icon.png" />
+    <None Include="Resources\printer.png" />
+    <None Include="Resources\imprimir.png" />
+    <None Include="Resources\data-synchronization.png" />
+    <None Include="Resources\close_gray.png" />
+    <None Include="Resources\sincronizar.png" />
+    <None Include="Resources\cambiar.png" />
+    <None Include="Resources\borrar.png" />
+    <None Include="Resources\tipo_estudio.png" />
+    <None Include="Resources\magic-wand.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\vista_previa.png" />
+    <None Include="Resources\preview_small2.png" />
+    <None Include="Resources\community.png" />
+    <None Include="Resources\email.png" />
+    <None Include="Resources\buscar.png" />
+    <None Include="Resources\osiris logo-12.png" />
+    <None Include="Resources\nuevologo_osiris.png" />
+    <Content Include="SqlServerTypes\Loader.cs" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\perfil_usuario.png" />
+    <None Include="Resources\logoempresa.png" />
+    <None Include="Resources\logo_empresa.png" />
+    <None Include="Resources\firmar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Word">
+      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>8</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="listas\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
